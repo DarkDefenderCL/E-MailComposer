@@ -34,7 +34,7 @@ function pEnviarEmail(){
 }
 
 function pLimpiarContenido(){
-    console.log('Limpiar contenido');
+    console.log('Limpiar contenido página');
     document.getElementById('edNomFic').value = '';
     document.getElementById('edtexto').value = '';
 }
@@ -47,6 +47,7 @@ function pEscribirFichero(){
     };
 
     //Accedemos al sistema de archivos
+    console.log('Conectando sistema de archivos');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 
     function gotFS(fileSystem) {
