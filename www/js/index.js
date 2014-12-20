@@ -47,6 +47,7 @@ function pEscribirFichero(){
     };
 
     //Accedemos al sistema de archivos
+    console.log('Conectando sistema de archivos');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 
     function gotFS(fileSystem) {
