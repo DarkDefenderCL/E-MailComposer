@@ -13,7 +13,7 @@ function pEnviarEmail(){
     };
     console.log('Conectando sistema de archivos');
     window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
-
+    console.log('Sistema de archivos conectado');
     function gotFS(fileSystem) {
         fileSystem.root.getFile(tFichero.Nombre, {create: true}, function (fileentry){
             var sRuta = fileentry.nativeURL.substring(6);
